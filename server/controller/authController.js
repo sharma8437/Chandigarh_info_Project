@@ -1,5 +1,7 @@
 const userModel = require("../models/userModel.js");
-const brcypt = require("bcrypt");
+
+const bcrypt = require('bcryptjs');
+
 const jwt = require("jsonwebtoken");
 require("dotenv").config();
 const transporter = require("../config/nodemailer.js");
@@ -23,7 +25,7 @@ const register = async (req, res) => {
       });
     }
 
-    const hashPassword = await brcypt.hash(password, 10);
+    const hashPassword = await bcrypt.hash(password, 10);
 
     const user = new userModel({ username,email, password: hashPassword });
     await user.save();
@@ -80,7 +82,7 @@ const login = async (req, res) => {
         .json({ success: false, message: "User not found" });
     }
 
-    const isMatch = await brcypt.compare(password, user.password);
+    const isMatch = await bcrypt.compare(password, user.password);
 
     if (!isMatch) {
       return res
