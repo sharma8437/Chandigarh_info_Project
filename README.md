@@ -29,8 +29,9 @@ This project is a simple, user-friendly platform showcasing information about Ch
 
 ##  Screenshots
 ###  Home Page
+<img width="1309" alt="Screenshot 2025-02-18 at 1 44 30 AM" src="https://github.com/user-attachments/assets/4294985e-f6b4-47f9-9e89-542116744599" />
 
-<img width="1438" alt="Screenshot 2025-02-17 at 10 42 48 PM" src="https://github.com/user-attachments/assets/a6b27914-6e4b-4f2d-8087-aac62991774b" />
+
 
 ###  Chandigarh History 
 <img width="1440" alt="Screenshot 2025-02-17 at 10 43 04 PM" src="https://github.com/user-attachments/assets/c3f79e08-8c80-40f7-9b3d-f6261c8dd59c" />
