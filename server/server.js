@@ -11,16 +11,18 @@ const userRoutes = require('./routes/userRoutes.js')
 const port = process.env.PORT || 4000;
 
 const app = express()
-const allowedOrigin = ['https://chandigarh-info.netlify.app']
+// const allowedOrigin = ['https://chandigarh-info.netlify.app']
 
-
+app.use(bodyParser.json());
 app.use(express.json())
 app.use(cookieParser())
 app.use(cors({
     credentials:true,
-    origin:allowedOrigin,
+    origin: "https://chandigarh-info.netlify.app",
 
 }))
+
+app.use(cors()); // resolving the error just deployement error 
 
 //routes
 app.use('/api/auth', authRoutes)
