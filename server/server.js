@@ -11,7 +11,7 @@ const userRoutes = require('./routes/userRoutes.js')
 const port = process.env.PORT || 4000;
 
 const app = express()
-const allowedOrigin = ['http://localhost:5173']
+const allowedOrigin = ['https://chandigarh-info.netlify.app']
 
 
 app.use(express.json())
