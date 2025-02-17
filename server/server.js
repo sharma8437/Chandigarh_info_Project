@@ -14,15 +14,20 @@ const app = express()
 // const allowedOrigin = ['https://chandigarh-info.netlify.app']
 
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json())
 app.use(cookieParser())
-app.use(cors({
-    credentials:true,
-    origin: "https://chandigarh-info.netlify.app",
 
-}))
+const corsOptions = {
+    origin: 'https://chandigarh-info.netlify.app', 
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true, 
+  };
+  app.use(cors(corsOptions));
 
-app.use(cors()); // resolving the error just deployement error 
+
+
 
 //routes
 app.use('/api/auth', authRoutes)
