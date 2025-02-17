@@ -1,0 +1,49 @@
+.navbar-conatiner{
+    height: 80px;
+    position: fixed;
+}
+.slick-dots {
+    position: absolute;
+    bottom: 43px !important;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    color: rgb(24, 171, 205);
+    
+}
+
+.slick-dots li button:before {
+    font-family: 'slick';
+    font-size: 14px !important;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    content: '•';
+    text-align: center;
+    opacity: .25 ;
+  
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.shadaw{
+    background-color: rgb(120, 122, 123);
+    opacity: 30%;
+    width: 600px;
+    height: 200px;
+    position: absolute;
+    z-index: 10;
+    margin: auto;
+    top: auto;
+    margin-bottom: 90px;
+    
+   
+}
+
+
